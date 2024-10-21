@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.lepu.ecg500.R;
+import com.Carewell.OmniEcg.R;
 import com.lepu.ecg500.entity.AiResultBean;
 import com.lepu.ecg500.entity.AiResultDiagnosisBean;
 import com.lepu.ecg500.entity.EcgDataInfoBean;

@@ -1,6 +1,6 @@
 package com.net.util
 
-import com.lepu.ecg500.BuildConfig
+import org.koin.android.BuildConfig
 
 
 /**

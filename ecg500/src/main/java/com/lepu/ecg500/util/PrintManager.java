@@ -2,7 +2,7 @@ package com.lepu.ecg500.util;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.lepu.ecg500.R;
+import com.Carewell.OmniEcg.R;
 import com.lepu.ecg500.entity.ConfigBean;
 import com.lepu.ecg500.entity.EcgSettingBean;
 import com.lepu.ecg500.entity.ReportSettingBean;

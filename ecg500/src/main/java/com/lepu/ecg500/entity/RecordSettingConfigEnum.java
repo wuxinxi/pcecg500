@@ -1,7 +1,9 @@
 package com.lepu.ecg500.entity;
 
+
 import androidx.annotation.StringRes;
-import com.lepu.ecg500.R;
+
+import com.Carewell.OmniEcg.R;
 import com.lepu.ecg500.util.CustomTool;
 
 

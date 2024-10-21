@@ -5,7 +5,7 @@ import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
 
-import com.lepu.ecg500.R;
+import com.Carewell.OmniEcg.R;
 import com.lepu.ecg500.entity.CommunSettingBean;
 import com.lepu.ecg500.entity.ConfigBean;
 import com.lepu.ecg500.entity.EcgSettingBean;

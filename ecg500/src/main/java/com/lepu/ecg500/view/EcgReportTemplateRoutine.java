@@ -17,7 +17,7 @@ import com.lepu.ecg500.entity.ReportSettingBean;
 import com.lepu.ecg500.entity.RecordSettingConfigEnum;
 import com.lepu.ecg500.util.EcgDataManager;
 import java.util.List;
-import com.lepu.ecg500.R;
+import com.Carewell.OmniEcg.R;
 public class EcgReportTemplateRoutine extends BaseEcgReportTemplate {
 
     //显示的药物试验的文字

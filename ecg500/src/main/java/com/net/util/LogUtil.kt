@@ -3,10 +3,10 @@ package com.net.util
 import android.content.Context
 import android.os.Environment
 import android.util.Log
-import com.lepu.ecg500.BuildConfig
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
+import org.koin.android.BuildConfig
 import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*

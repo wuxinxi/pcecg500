@@ -1,7 +1,7 @@
 package com.lepu.ecg500.view;
 
 import android.content.Context;
-import com.lepu.ecg500.R;
+import com.Carewell.OmniEcg.R;
 import com.lepu.ecg500.entity.AiResultMeasuredValueBean;
 import com.lepu.ecg500.entity.MacureResultBean;
 import com.lepu.ecg500.entity.PatientInfoBean;

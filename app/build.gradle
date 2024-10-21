@@ -5,16 +5,16 @@ plugins {
 //Targeting S+ (version 31 and above) requires that one of FLAG_IMMUTABLE or FLAG_MUTABLE be specified when creating a PendingIntent.
 //    Strongly consider using FLAG_IMMUTABLE, only use FLAG_MUTABLE if some functionality depends on the PendingIntent being mutable, e.g. if it needs to be used with inline replies or bubbles.
 android {
-    compileSdk 32
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.lepu.pcecg500"
         minSdk 21
-        targetSdk 32
+        targetSdk 34
         versionCode 1
         versionName "1.0"
         ndk {
-            abiFilters "armeabi-v7a"
+            abiFilters "armeabi-v7a", "arm64-v8a"
         }
         vectorDrawables.useSupportLibrary = true
     }
@@ -48,12 +48,13 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
+    namespace "com.lepu.pcecg500"
 }
 
 dependencies {
@@ -66,3 +67,5 @@ dependencies {
     implementation project(path: ':ecg500')
 
 }
+
+android.buildFeatures.buildConfig true

@@ -5,7 +5,7 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.text.format.Time;
 import android.util.Log;
-import com.lepu.ecg500.R;
+import com.Carewell.OmniEcg.R;
 import java.net.URL;
 import java.net.URLConnection;
 import java.text.DateFormat;

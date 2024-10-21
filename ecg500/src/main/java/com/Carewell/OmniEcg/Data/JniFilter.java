@@ -36,7 +36,7 @@ public class JniFilter {
      * @param clearStart
      * @param notifyFilter
      */
-    public native void powerFrequency50(float[][] ecgDataArray, int dataLen, float gainValue, boolean clearStart, NotifyFilter notifyFilter);
+    public native void powerFrequency50(float[][] ecgDataArray, int dataLen, float gainValue, boolean clearStart, com.Carewell.OmniEcg.jni.NotifyFilter notifyFilter);
 
     /**
      * 工频可以，震铃不可以
@@ -46,25 +46,25 @@ public class JniFilter {
      * @param clearStart
      * @param notifyFilter
      */
-    public native void powerFrequency50attenuation(float[][] ecgDataArray,int dataLen,float gainValue,boolean clearStart,NotifyFilter notifyFilter);
+    public native void powerFrequency50attenuation(float[][] ecgDataArray, int dataLen, float gainValue, boolean clearStart, com.Carewell.OmniEcg.jni.NotifyFilter notifyFilter);
 
-    public native void powerFrequency60(float[][] ecgDataArray,int dataLen,float gainValue,boolean clearStart,NotifyFilter notifyFilter);
+    public native void powerFrequency60(float[][] ecgDataArray, int dataLen, float gainValue, boolean clearStart, com.Carewell.OmniEcg.jni.NotifyFilter notifyFilter);
 
     //===========================肌电  这个滤波开了，就不调用低通了。肌电和低通是一种滤波   传的数据不能小于400.前后各200个点，中间取多少传多少
-    public native void electromyography25(float[][] ecgDataArray,int dataLen,float gainValue,boolean clearStart,NotifyFilter notifyFilter);
+    public native void electromyography25(float[][] ecgDataArray, int dataLen, float gainValue, boolean clearStart, com.Carewell.OmniEcg.jni.NotifyFilter notifyFilter);
 
-    public native void electromyography35(float[][] ecgDataArray,int dataLen,float gainValue,boolean clearStart,NotifyFilter notifyFilter);
+    public native void electromyography35(float[][] ecgDataArray, int dataLen, float gainValue, boolean clearStart, com.Carewell.OmniEcg.jni.NotifyFilter notifyFilter);
 
-    public native void electromyography45(float[][] ecgDataArray,int dataLen,float gainValue,boolean clearStart,NotifyFilter notifyFilter);
+    public native void electromyography45(float[][] ecgDataArray, int dataLen, float gainValue, boolean clearStart, com.Carewell.OmniEcg.jni.NotifyFilter notifyFilter);
 
     //===========================低通
-    public native void lowPass75(float[][] ecgDataArray,int dataLen,float gainValue,boolean clearStart,NotifyFilter notifyFilter);
+    public native void lowPass75(float[][] ecgDataArray, int dataLen, float gainValue, boolean clearStart, com.Carewell.OmniEcg.jni.NotifyFilter notifyFilter);
 
-    public native void lowPass90(float[][] ecgDataArray,int dataLen,float gainValue,boolean clearStart,NotifyFilter notifyFilter);
+    public native void lowPass90(float[][] ecgDataArray, int dataLen, float gainValue, boolean clearStart, com.Carewell.OmniEcg.jni.NotifyFilter notifyFilter);
 
-    public native void lowPass100(float[][] ecgDataArray,int dataLen,float gainValue,boolean clearStart,NotifyFilter notifyFilter);
+    public native void lowPass100(float[][] ecgDataArray, int dataLen, float gainValue, boolean clearStart, com.Carewell.OmniEcg.jni.NotifyFilter notifyFilter);
 
-    public native void lowPass165(float[][] ecgDataArray,int dataLen,float gainValue,boolean clearStart,NotifyFilter notifyFilter);
+    public native void lowPass165(float[][] ecgDataArray, int dataLen, float gainValue, boolean clearStart, com.Carewell.OmniEcg.jni.NotifyFilter notifyFilter);
 
     //==================
 

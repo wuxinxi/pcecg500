@@ -5,8 +5,9 @@ import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
+
+import com.Carewell.OmniEcg.R;
 import com.lepu.ecg500.util.CustomTool;
-import com.lepu.ecg500.R;
 
 public class EcgSettingConfigEnum {
     public enum LeadElectrodeType {

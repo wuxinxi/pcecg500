@@ -4,8 +4,8 @@ import android.content.Context;
 
 import androidx.annotation.StringRes;
 
+import com.Carewell.OmniEcg.R;
 import com.lepu.ecg500.util.CustomTool;
-import com.lepu.ecg500.R;
 
 
 public class SystemSettingConfigEnum {

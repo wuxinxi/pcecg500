@@ -3,7 +3,7 @@ package com.lepu.ecg500.entity;
 
 import androidx.annotation.StringRes;
 import com.lepu.ecg500.util.CustomTool;
-import com.lepu.ecg500.R;
+import com.Carewell.OmniEcg.R;
 
 public class SampleSettingConfigEnum {
 

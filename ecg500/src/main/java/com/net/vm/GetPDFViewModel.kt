@@ -140,22 +140,44 @@ class GetPDFViewModel(private val repository: Repository) : BaseViewModel() {
                     }
                     ecgDataItem[i] = shortArray
                 }
+                ecgDataInfoBean.ecgDataArray = ecgDataItem
+
+
+
                 //I/II/III/aVR/aVL/aVF/V1/V2/V3/V4/V5/V6
-                val data = arrayOfNulls<ShortArray>(8)
-                var index = 0
+//                val data = arrayOfNulls<ShortArray>(8)
+//                var index = 0
+//                for (i in 0..7) {
+//                    index = i
+//                    if (i > 1) {
+//                        index = i + 4
+//                    }
+//                    val temp = ecgDataArray[index]
+//                    val shortArray = ShortArray(temp.size)
+//                    for (j in temp.indices) {
+//                        shortArray[j] = temp[j]
+//                    }
+//                    data[i] = shortArray
+//                }
+
+
+
+                //I/II/ III/aVR/aVL/aVF /V1/V2/V3/V4/V5/V6
+                val data = ArrayList<ShortArray>()
+                var index: Int
                 for (i in 0..7) {
                     index = i
                     if (i > 1) {
                         index = i + 4
                     }
                     val temp = ecgDataArray[index]
-                    val shortArray = ShortArray(temp.size)
-                    for (j in temp.indices) {
-                        shortArray[j] = temp[j]
-                    }
-                    data[i] = shortArray
+                    data.add(temp.toShortArray().copyOfRange(temp.size - 1000 * 10, temp.size))
                 }
-                ecgDataInfoBean.ecgDataArray = ecgDataItem
+                //再补7导数据 都是0
+                (0..6).forEach {
+                    data.add(ShortArray(1000 * 10))  //win android linux 统一算法代码 这个地方补7导数据 默认0 一起15导数据
+                }
+
 
                 if (filePath != null) {
                     defaultFilePath = filePath
@@ -171,7 +193,7 @@ class GetPDFViewModel(private val repository: Repository) : BaseViewModel() {
                     xmlPath,
                     EcgSettingConfigEnum.LeadType.LEAD_12,
                     patientInfoBean,
-                    data
+                    data.toTypedArray()
                 )
                 mLocalResultBean.postValue(macureResultBean)
                 LogUtil.e(macureResultBean.toJson())

@@ -11,7 +11,7 @@ import android.text.StaticLayout;
 import android.text.TextPaint;
 import android.text.TextUtils;
 import android.util.Log;
-import com.lepu.ecg500.R;
+import com.Carewell.OmniEcg.R;
 import com.lepu.ecg500.util.Util;
 import com.lepu.ecg500.util.Const;
 import com.lepu.ecg500.entity.ConfigBean;
