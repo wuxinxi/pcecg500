@@ -25,6 +25,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+
+import com.Carewell.OmniEcg.jni.JniFilterNew;
 import com.hoho.android.usbserial.driver.UsbSerialDriver;
 import com.hoho.android.usbserial.driver.UsbSerialPort;
 import com.hoho.android.usbserial.driver.UsbSerialProber;
@@ -162,6 +164,9 @@ public class JavaActivity extends AppCompatActivity implements View.OnClickListe
                 runTask();
             }
         }, 200, 200);
+
+        //初始化滤波
+        JniFilterNew.getInstance().InitDCRecover(0);
     }
 
     private byte leadOffState = 0x00;
@@ -216,6 +221,7 @@ public class JavaActivity extends AppCompatActivity implements View.OnClickListe
                                 getLocalPdf(ecgDataArray);
                             }
                             leadOffState = 0x00;
+
                         }
                     }
                     short[][] finalWaveFormData = ecgDataUtil.filterLeadsData(waveFormData, bean); //是否使用滤波算法;
@@ -315,6 +321,8 @@ public class JavaActivity extends AppCompatActivity implements View.OnClickListe
                 allDetectInfo.clear();
                 isStart = !isStart;
                 clickTvStart();
+
+
             }
         }
     }
